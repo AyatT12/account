@@ -192,3 +192,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .scroll-table-div {
     direction: ltr;
 }
+/* account */
+#AccountForm {
+    direction: ltr;
+}
+.counterCode {
+    border-radius: 0px 8px 8px 0px !important;
+    border-left: none;
+   border-right:2px solid #faa64d ;
+}
+.tel-input {
+    border-radius: 8px 0px 0px 8px !important;
+}
+.number-input-container button{
+    margin: 0px 7px 0px 0px;
+}
+.profile-section {
+    border-left: 2px solid #D9D9D9;
+    border-right:none ;
+}
+.select-style{
+    background-position:right .75rem center;
+}

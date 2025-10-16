@@ -8,6 +8,16 @@ body {
     width: 60%;
     right: 50%;
 }
+.tables-style{
+    text-align: center;
+    direction: rtl;
+   
+}
+.tables-style thead{
+    text-align: center;
+    direction: rtl;
+   
+}
 .button-card img{
     transform: rotateY(180deg);
 }
@@ -84,7 +94,7 @@ textarea{
 }
 input[type="date"] {
     padding:5px 10px;
-  position: relative;
+    position: relative;
     text-align: start;
 }
 
@@ -97,7 +107,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #tableContainer {
     direction: rtl;
 }
-
+.dropdown-content-extension{
+    right: auto;
+    left: 0px;
+}
+.back-icon{
+    transform: rotate(180deg);
+}
 @media (max-width:960px) {
     .pdf_img {
       
@@ -124,15 +140,55 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   @media (max-width:350px) {
     .form-select-last {
-        width: 100px;
+        width: 100%;
     }
 }
-@media(min-width:1000px) {
+@media(max-width:991px) {
 
-    .dropdown-content-extension{
-        width: 140%;
-        right: -90px;
-        left: 90px;
+    .dropdown-content-extension {
+        /* width: 120%; */
+        left: 0px;
+        right: auto;
 
     }
+}
+#dropdown-content-Settlement, #dropdown-content-Settlement3 {
+    left: 0px;
+    right: auto;
+}
+
+
+
+/* ////////// */
+.form-select {
+     background-position: right .75rem center !important;
+     direction: ltr;
+     padding: .2rem 2rem .2rem .75rem;
+     height: 35px;
+}
+
+.form-select-last {
+    text-align: end;
+}
+.date-col {
+    padding-left:0px ;
+    padding-right: 5px;
+}
+#Table-details{
+    height: 45vh;
+}
+.tables-style th {
+    box-shadow: 3px -1px 0px 0px rgb(255 242 228), 2px 3px 0px 1px rgb(255 159 64 / 18%);
+}
+.tables-style th:first-child {
+    box-shadow: 1px 0px 0px 0px rgb(255 242 228), 2px 3px 0px 1px rgb(255 159 64 / 18%);
+    border-radius: 0px 8px 8px 0px;
+}
+.tables-style th:last-child {
+    box-shadow: 3px -1px 0px 0px rgb(255 242 228), 2px 3px 0px 1px rgb(255 159 64 / 18%);
+    border-radius: 8px 0px 0px 8px;
+}
+/* //////// */
+.scroll-table-div {
+    direction: ltr;
 }

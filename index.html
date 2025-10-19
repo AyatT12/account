@@ -15,241 +15,70 @@
         integrity="sha384-..." crossorigin="anonymous">
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/dripicons/2.0.0/webfont.min.css' />
     <link href="css/style.css" rel="styleSheet">
-    <style>
-        .inputs,
-        .select-style,
-        .textarea-inputs {
-            border-radius: 8px;
-            border: 2px solid #faa64d;
-            resize: none;
-            font-size: .875rem;
-            color: var(--primary-color);
-            height: 37px;
-            color: #39629C;
+    <!-- <link href="css/English_style.css" rel="styleSheet"> -->
+      <style>
+    body {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    #content-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0; /* Important for flex children */
+    }
+
+    .main-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        align-items: center;
+    }
+    .main-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        max-height: 95%;
+        overflow-y: auto;
+    }
+
+    .content-row {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        overflow-y: visible; 
+    }
+
+    form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    fieldset {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+     .form-card{
+        height: 100%;
+     }
+     @media(max-width:500px) {
+        .main-card{
+           max-height:none;
+           height: auto;
         }
-
-        .select-style {
-            background-position: left .75rem center;
-            padding: .375rem .75rem .375rem 2.25rem !important;
-        }
-
-        .form-select.is-invalid,
-        .was-validated .form-select:invalid {
-            background-position: left .75rem center, center right .5rem !important;
-        }
-
-        .select-style:focus,
-        .inputs:focus,
-        .textarea-inputs:focus {
-            box-shadow: none !important;
-            border: 2px solid #facd9c !important;
-        }
-
-        #AccountForm {
-            direction: rtl;
-        }
-
-        .AccountTitle {
-            text-align: start;
-        }
-
-        .AccountSave {
-            text-align: end;
-        }
-
-        .custom-img-btn {
-            border: none;
-            background: none;
-        }
-
-        .sinature-Btn-Card {
-            cursor: pointer;
-        }
-
-        #previewSignature {
-            width: 100px;
-        }
-
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .change-profile-btn {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            cursor: pointer;
-        }
-
-        #Profile-photo {
-            border-radius: 50%;
-            height: 100%;
-        }
-
-        .user-name {
-            color: #504949;
-        }
-
-        .info-card {
-            box-shadow: 0.5px 1px 4px 0px #39629C3D;
-            border-radius: 8px;
-
-        }
-
-        .header-card {
-            border-bottom: 1px solid #D9D9D9;
-            font-size: 20px;
-            font-weight: 500;
-        }
-
-        .profile-section {
-            border-right: 2px solid #D9D9D9;
-        }
-
-        .counterCode {
-            border-radius: 8px 0px 0px 8px !important;
-            border-right: none;
-            background-color: white;
-            color: var(--primary-color);
-            direction: ltr;
-            height: 37px;
-            padding: 0px !important;
-            width: 78px;
-            color: #39629C
-        }
-
-        .tel-input {
-            border-radius: 0px 8px 8px 0px !important;
-        }
-
-        .Saved-data {
-            color: #39629C
-        }
-
-        .data-card {
-            text-align: start;
-        }
-
-        /*  */
-        .alert-col {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .checkbox-alert-col {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            margin-bottom: .5rem;
-        }
-
-        /* Style the container */
-
-        .number-input-container {
-            display: inline-flex;
-            align-items: center;
-            border: 2px solid #ff9626;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .number-input-container.disabled {
-            display: inline-flex;
-            align-items: center;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        /* Style the buttons with arrows */
-        .number-input-container button {
-            background-color: transparent;
-            border: none;
-            padding: 2px;
-            margin: 0px 0px 0px 7px;
-            cursor: pointer;
-            font-size: 9px;
-            display: inline-block;
-            text-align: center;
-            line-height: 1;
-        }
-
-        .number-input-container button:hover {
-            background-color: #fffcfc86;
-        }
-
-        /* Up arrow */
-        .increment {
-            width: 15px;
-            height: 15px;
-            background-image: url("./images/up.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            border: none;
-            cursor: pointer;
-            background-position: center;
-        }
-
-        .increment::before {
-            content: '';
-        }
-
-        /* Down arrow */
-        .deincrement {
-            width: 15px;
-            height: 15px;
-            background-image: url(./images/down1.svg);
-            background-size: contain;
-            background-repeat: no-repeat;
-            border: none;
-            cursor: pointer;
-            background-position: center;
-        }
-
-        .deincrement::before {
-            content: '';
-        }
-
-        /* Style the input */
-        .alert-input {
-            width: 60px;
-            text-align: center;
-            border: none;
-            outline: none;
-            font-size: 16px;
-            border-radius: 8px;
-            color: rgb(0, 0, 0);
-        }
-
-        .alert-input.disabled {
-            color: rgb(110, 110, 110);
-        }
-
-        /* Remove spin buttons */
-        .alert-input::-webkit-outer-spin-button,
-        .alert-input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        .alert-input {
-            -moz-appearance: textfield;
-        }
-
-        @media (max-width : 991px) {
-            .acoount-cards-row {
-                flex-direction: column-reverse;
-            }
-        }
-    </style>
-    <!-- <link href="../../css/English_style.css" rel="styleSheet"> -->
-
+     }
+</style>
 </head>
 
 <body id="page-top" style="background-color:rgba(254, 248, 232, 1);">
@@ -258,37 +87,31 @@
     <div id="content-wrapper">
 
         <!-- Main Content -->
-        <div id="content">
-            <!-- Topbar -->
+          <!-- Topbar -->
             <header class="header">
                 <div class="navbar-area">
                     <!-- Topbar -->
-                    <nav class="navbar navbar-expand navbar-light topbar mb-2 static-top   justify-content-between" style="height:100px">
-                        
+                    <nav class="navbar navbar-expand navbar-light topbar mb-2 static-top   justify-content-between"
+                        style="height:100px">
+
                     </nav>
                 </div>
             </header>
-            <div class="container-fluid">
-
-                <section class="section-mainCard">
+            <main class="main-container container-fluid" style="height: auto;">
                     <div class="row justify-content-center w-100 h-100">
                         <!--  -->
-                        <div class="col-sm-11 col-xl-8 text-center  ">
+                        <div class="col-sm-11 col-xl-8 text-center h-100 ">
                             <div class="card main-card ">
-                               <div class="col-md-12 py-2 text-start">
-                                 <a href="https://ayatt12.github.io/BnanBranch/" style="width: fit-content;">
-                                    <img src="img/Close.svg" alt="close_icon" class="close-icon">
-                                </a>
-                               </div>
+                                <div class="col-md-12 py-2 d-flex">
+                                    <a href="https://ayatt12.github.io/BnanBranch/">
+                                        <img src="img/Close.svg" alt="close_icon" class="close-icon">
+                                    </a>
+                                </div>
                                 <div class="col-md-12" style="flex: 1;min-height: 0;">
                                     <div class="row justify-content-center h-100 content-row">
-                                        <!--  -->
                                         <div class="col-md-12 h-100">
                                             <fieldset>
-                                                <form action=""
-                                                    class="needs-validation h-100 d-flex flex-column justify-content-between "
-                                                    novalidate id="AccountForm">
-                                                    <!--  -->
+                                                <form action="" class="needs-validation h-100 d-flex flex-column justify-content-between" novalidate id="AccountForm">
                                                     <div class="row  justify-content-end ">
                                                         <div class="col-lg-12">
                                                             <div class="container-fluid">
@@ -307,7 +130,7 @@
                                                                             <div class="data-card">
                                                                                 <div class="container-fluid">
                                                                                     <div class="row g-3 py-3">
-                                                                                        <div class="col-md-12">
+                                                                                        <div class="col-md-6">
                                                                                             <div class="row">
                                                                                                 <div class="col-auto">
                                                                                                     <p>رقم الموظف</p>
@@ -318,19 +141,7 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="col-md-12">
-                                                                                            <div class="row">
-                                                                                                <div class="col-auto">
-                                                                                                    <p> الهوية </p>
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class=" col-md-auto Saved-data">
-                                                                                                    <p> 6548816823054
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-md-12">
+                                                                                        <div class="col-md-6">
                                                                                             <div class="row">
                                                                                                 <div class="col-auto">
                                                                                                     <p> الحد الإئتماني
@@ -516,10 +327,8 @@
                                                                         <div class="row gap-3">
                                                                             <div
                                                                                 class="col-md-12 d-flex justify-content-center">
-                                                                                <div class="profile-photo">
-                                                                                    <img src="images/pic (3).svg"
-                                                                                        class="w-100"
-                                                                                        id="Profile-photo">
+                                                                                <div class="profile-photo"
+                                                                                    style="background-image:url(images/pic\ \(3\).svg);">
                                                                                     <img src="images/change pic.svg"
                                                                                         class="change-profile-btn"
                                                                                         id="change-profile-btn">
@@ -560,7 +369,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12 my-2 px-0 d-flex justify-content-end">
+                                                    <div class="col-md-12 py-2 px-0 d-flex justify-content-end">
                                                         <button class="btn btn-custom p-2 px-4"
                                                             type="submit">حفظ</button>
                                                     </div>
@@ -573,11 +382,7 @@
                             </div>
                         </div>
                     </div>
-
-                </section>
-            </div>
-
-
+            </main>
 
             <footer class="fixed-bottom-xl">
                 <div class="before-footer-widget">
@@ -590,12 +395,15 @@
 
             </footer>
 
-        </div>
-
         <!-- signature modal -->
-        <div class="modal fade" id="signature-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="signature-modal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"
+            data-bs-keyboard="false">
             <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
                 <div class="modal-content signature-modal-content p-3">
+                    <div class="modal-header p-1 border-0">
+                        <button type="button" class="btn-close m-0 p-1" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
                     <div class="modal-body Signature-modal-body">
                         <div class="SignatureCard">
                             <div class="image-main-container" id="removeSignatureImg"></div>
@@ -641,17 +449,16 @@
     <script>
         const changeProfileBtn = document.getElementById('change-profile-btn');
         const ProfilePhotoInput = document.getElementById('Profile-photo-input');
-        const ProfilePhoto = document.getElementById('Profile-photo');
+        const profilePhotoDiv = document.querySelector('.profile-photo');
 
         changeProfileBtn.addEventListener('click', function () {
             ProfilePhotoInput.click();
+        });
 
-        })
         var loadFile = function (event) {
             var reader = new FileReader();
             reader.onload = function () {
-                var output = document.getElementById('Profile-photo');
-                output.src = reader.result;
+                profilePhotoDiv.style.backgroundImage = 'url(' + reader.result + ')';
             };
             reader.readAsDataURL(event.target.files[0]);
         };
@@ -704,6 +511,5 @@
         });
     </script>
 </body>
-
 
 </html>

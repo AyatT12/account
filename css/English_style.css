@@ -18,17 +18,19 @@ body {
     direction: rtl;
    
 }
-.button-card img{
+.button-row img{
+    transform: rotate(180deg);
+} img{
     transform: rotateY(180deg);
 }
 .radio-container {
     gap: 10px
 }
 
-.form-check-inline {
-
-    gap: 10px;
-}
+   .form-check-inline {
+    padding-left: 21px;
+    gap: 5px;
+   } 
 
 .cancle-icon {
 
@@ -187,10 +189,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .tables-style th:last-child {
     box-shadow: 3px -1px 0px 0px rgb(255 242 228), 2px 3px 0px 1px rgb(255 159 64 / 18%);
     border-radius: 8px 0px 0px 8px;
-}
-/* //////// */
-.scroll-table-div {
-    direction: ltr;
 }
 /* account */
 #AccountForm {

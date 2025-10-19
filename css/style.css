@@ -3,17 +3,11 @@
     padding: 0;
 }
 
-html {
-    min-height: 100vh;
-    height: 100%;
-}
-
 /*Background color*/
 body {
     font-family: cairo;
     font-weight: 400;
-    min-height: 100vh;
-    height: 100%;
+    height: 100vh;
     font-size: .875rem;
     letter-spacing: 0.28px;
 }
@@ -168,6 +162,9 @@ nav {
 .secondline-p {
     font-size: .8rem;
     margin-bottom: .4rem;
+}
+.btn{
+    white-space: nowrap;
 }
 
 /*======================================================================
@@ -619,10 +616,13 @@ textarea {
 .form-check-inline {
     display: inline-flex;
     margin-right: 0rem;
-    flex-direction: row-reverse;
     gap: 30px;
 }
-
+@media (max-width:500px) {
+   .form-check-inline {
+    padding: 2px;
+   } 
+}
 .data-row {
     flex-direction: row-reverse;
 }
@@ -881,7 +881,8 @@ footer {
     -moz-appearance: none;
     appearance: none;
     position: static;
-    margin-left: 10px;
+    margin: 0px;
+    margin-bottom: 10px;
 }
 
 /* ///////////////////////////////////////////extension1////////////////////////////////////// */
@@ -2146,7 +2147,9 @@ input[type=checkbox] {
     height: 58vh;
     min-height: 400px;
     overflow: auto;
-    direction: rtl;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
 }
 
 .scroll-table-div::-webkit-scrollbar {
@@ -2830,6 +2833,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-items: center;
     justify-content: center;
     position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f7f7f7;
 }
 
 .change-profile-btn {
@@ -2940,7 +2947,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .increment {
     width: 15px;
     height: 15px;
-    background-image: url("./images/up.svg");
+    background-image: url("../img/up.svg");
     background-size: contain;
     background-repeat: no-repeat;
     border: none;
@@ -2956,7 +2963,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .deincrement {
     width: 15px;
     height: 15px;
-    background-image: url(./images/down1.svg);
+    background-image: url("../img/down1.svg");
     background-size: contain;
     background-repeat: no-repeat;
     border: none;

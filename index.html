@@ -23,7 +23,6 @@
         flex-direction: column;
         margin: 0;
         padding: 0;
-        overflow-y:hidden;
     }
     .container-fluid{
         height: auto;
@@ -75,6 +74,10 @@
      .form-card{
         height: 100%;
      }
+    @media(max-width:500px) {
+       body{
+          overflow-y: hidden;
+        }
       @media(min-width:1400px) {
         .main-card{
            max-height:95%;
@@ -498,5 +501,6 @@
 </body>
 
 </html>
+
 
 

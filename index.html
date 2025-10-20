@@ -24,7 +24,9 @@
         margin: 0;
         padding: 0;
     }
-
+    .container-fluid{
+        height: auto;
+    }
     #content-wrapper {
         flex: 1;
         display: flex;
@@ -72,20 +74,15 @@
      .form-card{
         height: 100%;
      }
-     @media(max-width:768px) {
-        .main-card{
-           max-height:none;
-           height: auto;
-        }
-     }
-    @media(min-width:1400px) {
+      @media(min-width:1400px) {
         .main-card{
            max-height:95%;
         }
      }
 </style>
 </head>
-    <body id="page-top" style="background-color:rgba(254, 248, 232, 1);">
+
+<body id="page-top" style="background-color:rgba(254, 248, 232, 1);">
 
     <!-- Content Wrapper -->
     <div id="content-wrapper">
@@ -124,50 +121,46 @@
                                                 <form action=""
                                                     class="needs-validation h-100 d-flex flex-column justify-content-between" novalidate
                                                     id="AccountForm">
-                                                    <div class="row  justify-content-end ">
+                                                    <div class="row  justify-content-end mt-lg-4 ">
                                                         <div class="col-lg-12">
                                                             <div class="container-fluid">
                                                                 <div class="row mt-3 justify-content-around acoount-cards-row">
                                                                     <!--  -->
-                                                                    <div class="col-lg-7">
+                                                                    <div class="col-lg-8">
                                                                         <div class="info-card mb-3">
-                                                                            <div class="header-card text-center py-2">
-                                                                                بيانات
-                                                                            </div>
                                                                             <div class="data-card">
                                                                                 <div class="container-fluid">
-                                                                                    <div class="row g-3 py-3">
+                                                                                    <div class="row gap-2 gap-lg-3 py-3">
                                                                                         <div class="col-md-6">
-                                                                                            <div class="row">
+                                                                                            <div class="row g-2">
                                                                                                 <div class="col-auto">
                                                                                                     <p>رقم الموظف</p>
                                                                                                 </div>
                                                                                                 <div
-                                                                                                    class=" col-md-auto Saved-data">
+                                                                                                    class="col-auto Saved-data">
                                                                                                     <p> 401 </p>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col-md-6">
-                                                                                            <div class="row">
+                                                                                            <div class="row g-2">
                                                                                                 <div class="col-auto">
                                                                                                     <p> الحد الإئتماني
                                                                                                     </p>
                                                                                                 </div>
                                                                                                 <div
-                                                                                                    class=" col-md-auto Saved-data">
+                                                                                                    class="col-auto Saved-data">
                                                                                                     <p> 1.000.000.00
                                                                                                     </p>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col-md-12">
-                                                                                            <div
-                                                                                                class="row align-items-baseline">
+                                                                                            <div class="row align-items-baseline g-2">
                                                                                                 <div
                                                                                                     class="col-md-auto">
                                                                                                     <label for="phone"
-                                                                                                        class="form-label">
+                                                                                                        class="form-label mb-0">
                                                                                                         الجوال </label>
                                                                                                 </div>
                                                                                                 <div
@@ -202,12 +195,11 @@
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col-md-12">
-                                                                                            <div
-                                                                                                class="row align-items-baseline">
+                                                                                            <div class="row align-items-baseline g-2">
                                                                                                 <div
                                                                                                     class="col-md-auto">
                                                                                                     <label for="email"
-                                                                                                        class="form-label">
+                                                                                                        class="form-label mb-0">
                                                                                                         البريد
                                                                                                         الإلكتروني
                                                                                                     </label>
@@ -221,25 +213,12 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="info-card">
-                                                                            <div class="header-card text-center py-2">
-                                                                                إعدادات
-                                                                            </div>
-                                                                            <div class="data-card ">
-                                                                                <div class="container-fluid">
-                                                                                    <div class="row py-3 g-3">
                                                                                         <div class="col-md-6">
-                                                                                            <div
-                                                                                                class="row align-items-baseline">
-                                                                                                <div
-                                                                                                    class="col-md-auto">
+                                                                                            <div class="row align-items-baseline g-2">
+                                                                                                <div class="col-md-auto">
                                                                                                     <label
                                                                                                         for="Password-hint"
-                                                                                                        class="form-label">
+                                                                                                        class="form-label mb-0">
                                                                                                         تلميح كلمة السر
                                                                                                     </label>
                                                                                                 </div>
@@ -254,17 +233,17 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <div class="row align-items-baseline">
+                                                                                        <div class="col-auto col-md-6">
+                                                                                            <div class="row align-items-baseline g-2">
                                                                                                 <div
                                                                                                     class="col-md-auto">
                                                                                                     <label
                                                                                                         for="automatic-logout"
-                                                                                                        class="form-label">
+                                                                                                        class="form-label mb-0">
                                                                                                         وقت الخروج الآلي
                                                                                                     </label>
                                                                                                 </div>
-                                                                                                <div class="col-md-2">
+                                                                                                <div class="col">
                                                                                                     <div
                                                                                                         class="number-input-container  ">
                                                                                                         <div
@@ -295,8 +274,7 @@
                                                                                             </div>
 
                                                                                         </div>
-
-                                                                                        <div class="col-xl-7">
+                                                                                        <div class="col-auto col-xl-7">
                                                                                             <div
                                                                                                 class="row align-items-baseline">
                                                                                                 <div
@@ -305,7 +283,7 @@
                                                                                                         for="lang">اللغة
                                                                                                         الافتراضية</label>
                                                                                                 </div>
-                                                                                                <div class="col-md-6  ">
+                                                                                                <div class="col-md-6">
                                                                                                     <select
                                                                                                         class="form-select select-style text-center"
                                                                                                         name="language"
@@ -329,8 +307,8 @@
                                                                         </div>
                                                                     </div>
                                                                     <!--  -->
-                                                                    <div class="col-lg-4 profile-section">
-                                                                        <div class="row gap-3">
+                                                                    <div class="col-lg-3 profile-section">
+                                                                        <div class="row gap-1 gap-lg-3">
                                                                             <div
                                                                                 class="col-md-12 d-flex justify-content-center">
                                                                                 <div class="profile-photo"
@@ -519,5 +497,3 @@
 </body>
 
 </html>
-
-

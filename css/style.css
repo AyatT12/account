@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
@@ -3002,7 +3002,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /*  */
 @media (max-width : 500px) {
     .container-fluid {
-        height: 80vh;
+        height: 75vh;
+    }
+    .form-card{
+        height: 65vh;
     }
     .Hidden-word{
         display: none;

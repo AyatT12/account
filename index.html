@@ -16,7 +16,7 @@
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/dripicons/2.0.0/webfont.min.css' />
     <link href="css/style.css" rel="styleSheet">
     <!-- <link href="css/English_style.css" rel="styleSheet"> -->
-      <style>
+    <style>
     body{
         min-height: 100dvh;
         display: flex;
@@ -31,7 +31,7 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        min-height: 0; /* Important for flex children */
+        min-height: 0;
     }
 
     .main-container {
@@ -50,30 +50,6 @@
         overflow-y: auto;
     }
 
-    .content-row {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        min-height: 0;
-        overflow-y: visible; 
-    }
-
-    form {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        min-height: 0;
-    }
-
-    fieldset {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        min-height: 0;
-    }
-     .form-card{
-        height: 100%;
-     }
     @media(max-width:500px) {
     body{
           overflow-y: hidden;
@@ -87,7 +63,7 @@
 </style>
 </head>
 
-<body id="page-top" style="background-color:rgba(254, 248, 232, 1);">
+<body id="page-top" >
 
     <!-- Content Wrapper -->
     <div id="content-wrapper">
@@ -102,10 +78,10 @@
 
                     </nav>
                 </div></header>
-                <main class="main-container container-fluid" style="height: auto;">
-                    <div class="row justify-content-center w-100 h-100">
+                <main class="main-container container-fluid">
+                    <div class="row justify-content-center w-100 h-100" style="flex: 1;">
                         <!--  -->
-                        <div class="col-sm-11 col-xl-8 text-center h-100 ">
+                        <div class="col-sm-11 col-xl-8 text-center">
                             <div class="card main-card ">
                                 <div class="col-md-12">
                                     <div class="row py-2">
@@ -128,8 +104,8 @@
                                                     id="AccountForm">
                                                     <div class="row  justify-content-end mt-lg-4 ">
                                                         <div class="col-lg-12">
-                                                            <div class="container-fluid">
-                                                                <div class="row mt-3 justify-content-around acoount-cards-row">
+                                                            <div class="container-fluid" style="border: 1px solid #39629c9c; border-radius:7px; box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);">
+                                                                <div class="row mt-3 my-lg-3 justify-content-around acoount-cards-row">
                                                                     <!--  -->
                                                                     <div class="col-lg-8">
                                                                         <div class="info-card mb-3">

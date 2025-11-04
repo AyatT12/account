@@ -49,8 +49,7 @@
             display: flex;
             flex-direction: column;
             min-height: 0;
-            max-height: 82%;
-            overflow-y: auto;
+            max-height: 93%;
         }
 
         .content-row {
@@ -76,7 +75,7 @@
         }
 
         .form-card {
-            height: 100%;
+            flex: 1;
         }
 
         @media(max-width:500px) {
@@ -109,7 +108,7 @@
                 </nav>
             </div>
         </header>
-        <main class="main-container container-fluid" style="height: auto;">
+        <main class="main-container container-fluid">
             <div class="row justify-content-center w-100 h-100">
                 <!--  -->
                 <div class="col-sm-11 col-xl-8 text-center h-100 ">
@@ -126,20 +125,59 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 px-xxl-4" style="flex: 1;min-height: 0;">
+                        <div class="col-md-12 px-xxl-4" style="flex: 1;min-height: 0;height: 100%;">
                             <div class="row justify-content-center h-100 content-row">
                                 <div class="col-md-12 h-100">
                                     <fieldset>
                                         <form action=""
-                                            class="needs-validation h-100 d-flex flex-column justify-content-between"
+                                            class="needs-validation d-flex flex-column justify-content-between"
                                             novalidate id="AccountForm">
-                                            <div class="row justify-content-end mt-lg-4">
-                                                <div class="col-lg-12">
+                                            <div class="row justify-content-end" style="flex: 1; min-height: 0;">
+                                                <div class="col-lg-12 h-100 d-flex">
                                                     <div class="container-fluid"
-                                                        style=" border: 1px solid #39629c9c;border-radius: 7px; box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);">
-                                                        <div class="row my-3 justify-content-around acoount-cards-row">
+                                                        style=" border: 1px solid #39629c9c;border-radius: 7px; box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);flex: 1;overflow: auto;">
+                                                        <div class="row my-3 justify-content-around account-cards-row">
+                                                            <div class="col-lg-3 profile-section">
+                                                                <div class="row gap-1 gap-lg-3">
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <div class="profile-photo"
+                                                                            style="background-image:url(images/pic\ \(3\).svg);">
+                                                                            <img src="images/change pic.svg"
+                                                                                class="change-profile-btn"
+                                                                                id="change-profile-btn">
+                                                                            <input type="file" id="Profile-photo-input"
+                                                                                class="d-none" name="Profile-photo"
+                                                                                onchange="loadFile(event)" />
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <div class="row align-items-center ">
+                                                                            <div class="col-auto">
+                                                                                <button type="button"
+                                                                                    class="custom-img-btn"><img
+                                                                                        src="images/icon.svg"
+                                                                                        data-bs-toggle="modal"
+                                                                                        href="#signature-modal" /></button>
+                                                                            </div>
+                                                                            <div class="col-auto">
+                                                                                <img src="images/signature.svg"
+                                                                                    id="previewSignature">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center  align-items-center flex-column">
+                                                                        <p class="user-name">عبدالله محمد
+                                                                            المعشني</p>
+                                                                        <p>المدير التنفيذي</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                             <!--  -->
-                                                            <div class="col-lg-8">
+                                                            <div class="col-lg-8 Profile-Data-section">
                                                                 <div class="info-card mb-3">
                                                                 <div class="header-card text-center py-2">
                                                                     بيانات
@@ -315,51 +353,11 @@
                                                                 </div>
                                                             </div>
                                                             <!--  -->
-                                                            <div class="col-lg-3 profile-section">
-                                                                <div class="row gap-1 gap-lg-3">
-                                                                    <div
-                                                                        class="col-md-12 d-flex justify-content-center">
-                                                                        <div class="profile-photo"
-                                                                            style="background-image:url(images/pic\ \(3\).svg);">
-                                                                            <img src="images/change pic.svg"
-                                                                                class="change-profile-btn"
-                                                                                id="change-profile-btn">
-                                                                            <input type="file" id="Profile-photo-input"
-                                                                                class="d-none" name="Profile-photo"
-                                                                                onchange="loadFile(event)" />
-
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col-md-12 d-flex justify-content-center">
-                                                                        <div class="row align-items-center ">
-                                                                            <div class="col-auto">
-                                                                                <button type="button"
-                                                                                    class="custom-img-btn"><img
-                                                                                        src="images/icon.svg"
-                                                                                        data-bs-toggle="modal"
-                                                                                        href="#signature-modal" /></button>
-                                                                            </div>
-                                                                            <div class="col-auto">
-                                                                                <img src="images/signature.svg"
-                                                                                    id="previewSignature">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col-md-12 d-flex justify-content-center  align-items-center flex-column">
-                                                                        <p class="user-name">عبدالله محمد
-                                                                            المعشني</p>
-                                                                        <p>المدير التنفيذي</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12 py-2 px-0 d-flex justify-content-end">
+                                            <div class="col-md-12 py-2 px-0 d-flex">
                                                 <button class="btn check-btn payment-button" type="submit">حفظ</button>
                                             </div>
                                         </form>

@@ -191,9 +191,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 8px 0px 0px 8px;
 }
 /* account */
-#AccountForm {
+.Profile-Data-section {
     direction: ltr;
 }
+
 .counterCode {
     border-radius: 0px 8px 8px 0px !important;
     border-left: none;

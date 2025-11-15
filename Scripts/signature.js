@@ -31,21 +31,13 @@ imageUpload.addEventListener("change", function () {
     const reader = new FileReader();
     reader.onload = function (e) {
       const imageURL = e.target.result;
-      const previewImage = document.createElement("img");
-      previewImage.classList.add("preview-image");
-      previewImage.src = imageURL;
-      previewImage.id = "signatureImage";
-      imgeURL = imageURL;
       mainContainer.innerHTML =
-        '<i class="fa-regular fa-circle-xmark xmark-icon"></i>';
-      uploadContainer.innerHTML = "";
-      uploadContainer.appendChild(previewImage);
-      uploadContainer.classList.add("previewing");
+        '<i class="fa-regular fa-circle-xmark"  style="cursor: pointer;"></i>';
+      Previewing_Signature(imageURL);
     };
     reader.readAsDataURL(file);
   }
 });
-
 removeSignatureImg.addEventListener("click", function (event) {
   event.preventDefault();
   if (uploadContainer.firstChild) {
@@ -141,12 +133,11 @@ function SaveWrittenSignature() {
   document.body.classList.remove("no-scroll");
   var canvas = document.getElementById("canvas");
   var dataURL = canvas.toDataURL();
-  var link = document.createElement("a");
-  link.href = dataURL;
-  console.log(link.href);
-  document.getElementById('previewSignature').src = link.href;
+  Previewing_Signature(dataURL);
+  document.getElementById("previewSignature").src = dataURL;
   $("#signature-modal").modal("hide");
 }
+
 // Save the uploded signature image
 function SaveUplodedSignature() {
     const img = document.getElementById("signatureImage");
@@ -168,6 +159,65 @@ function SaveUplodedSignature() {
     $("#signature-modal").modal("hide");
   }
   
+// // // //////////////////////////////////////////////// عرض صورة التوقيع ////////////////////////////////////////////////////////////////////////
+function Previewing_Signature(imageURL) {
+  const previewImage = document.createElement("img");
+  previewImage.classList.add("preview-image");
+  previewImage.classList.add("bg-white");
+  previewImage.src = imageURL;
+  previewImage.id = "signatureImage";
+  imgeURL = imageURL;
+  uploadContainer.innerHTML = "";
+  uploadContainer.appendChild(previewImage);
+  uploadContainer.classList.add("previewing");
+  previewImage.addEventListener("click", function () {
+    var newTab = window.open();
+    $(newTab.document.head).html(`
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>View Image</title>
+          <style>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+            html, body {
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+            }
+            body {
+              background-color: black;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .image-container {
+              width: 70vw;
+              height: 70vh;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              width: auto;
+              height: auto;
+              object-fit: contain;
+              background-color:white;
+            }
+          </style>
+          `);
+    newTab.document.body.innerHTML = `
+          <div class="image-container">
+            <img src="${imgeURL}" alt="View Image">
+          </div>
+        `;
+  });
+}
+
 document.getElementById("save").addEventListener("click", function () {
   if (saveSignatureBtn === "UploadSigntaurePic") {
     SaveUplodedSignature();
